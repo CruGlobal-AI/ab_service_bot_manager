@@ -15,11 +15,11 @@ jobs:
         with:
           path: ab_service_bot_manager
       - name: Install AppBuilder
-        uses: digi-serve/ab-install-action@v1
+        uses: CruGlobal-AI/ab-install-action@v1
       - name: Check out kitchen-sink tests
         uses: actions/checkout@v2
         with:
-          repository: digi-serve/kitchensink_app
+          repository: ${{ github.repository_owner }}/kitchensink_app
           path: AppBuilder/test/e2e/cypress/e2e/kitchensink_app
       - run: npm install pm2@latest -g
       - name: Save Logs
